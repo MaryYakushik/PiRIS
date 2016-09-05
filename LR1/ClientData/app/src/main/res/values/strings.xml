@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ClientData</string>
+
+    //-------------DB-Connection-Info-----------------
+    <string name="db_url">jdbc:mysql://192.168.0.106:3306/bank_db</string>
+    <string name="user">user</string>
+    <string name="password">13345678</string>
+
+    //-------------Query-----------------
+
+    <string name="select_all_clients">SELECT * FROM Client</string>
+    <string name="select_client">SELECT * FROM Client WHERE surname = %s AND name = %s</string>
+
+    <string name="select_pasport">SELECT * FROM Pasport WHERE idPasport = %s</string>
+
+    <string name="select_all_places_of_birth">SELECT * FROM Town</string>
+    <string name="select_place_of_birth">SELECT * FROM Town WHERE idTown = %s</string>
+
+    <string name="select_all_marital_status">SELECT * FROM MaritalStatus</string>
+    <string name="select_marital_status">SELECT * FROM MaritalStatus WHERE idMaritalStatus = %s</string>
+
+    <string name="select_all_nationalities">SELECT * FROM Nationality</string>
+    <string name="select_nationality">SELECT * FROM Nationality WHERE idNationality = %s</string>
+
+    <string name="select_all_disabilities">SELECT * FROM Disability</string>
+    <string name="select_disability">SELECT * FROM Disability WHERE idDisability = %s</string>
+
+</resources>

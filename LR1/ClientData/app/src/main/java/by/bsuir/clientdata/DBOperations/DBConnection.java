@@ -8,15 +8,18 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import by.bsuir.clientdata.R;
+
 public class DBConnection extends AsyncTask<String, Void, Statement> {
 
-    String url = "jdbc:mysql://192.168.0.106:3306/bank_db";
-    String user = "user";
-    String password = "13345678";
-    Context mContext;
+    String url;
+    String user;
+    String password;
 
     public DBConnection(Context context) {
-        mContext = context;
+        url = context.getString(R.string.db_url);
+        user = context.getString(R.string.user);
+        password = context.getString(R.string.password);
     }
 
     @Override

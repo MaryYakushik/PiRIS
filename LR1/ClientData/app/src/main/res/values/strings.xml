@@ -8,21 +8,30 @@
 
     //-------------Query-----------------
 
-    <string name="select_all_clients">SELECT * FROM Client</string>
-    <string name="select_client">SELECT * FROM Client WHERE surname = %s AND name = %s</string>
+    <string name="select_all_clients">SELECT surname, client.name, patronymic, pasportId, dateOfBirth,
+        gender, placeOfBirth, address, homePhone, mobilePhone, `e-mail`, pensioner, monthlyIncome,
+        military, `group`, status, nationality.nationality, townName
+        FROM client, disability, maritalstatus, nationality, town  WHERE
+	        client.disability = disability.idDisability
+        AND client.maritalStatus = maritalstatus.idMaritalStatus
+        AND client.nationality = nationality.idNationality
+        AND client.placeOfResidence = town.idTown
+    </string>
+    <string name="select_client">SELECT * FROM Client WHERE surname = %1$s AND name = %2$s</string>
 
-    <string name="select_pasport">SELECT * FROM Pasport WHERE idPasport = %s</string>
+    <string name="select_pasport">SELECT * FROM Pasport WHERE idPasport = %1$s</string>
+    <string name="select_all_pasports">SELECT * FROM Pasport</string>
 
     <string name="select_all_places_of_birth">SELECT * FROM Town</string>
-    <string name="select_place_of_birth">SELECT * FROM Town WHERE idTown = %s</string>
+    <string name="select_place_of_birth">SELECT * FROM Town WHERE idTown = %1$s</string>
 
     <string name="select_all_marital_status">SELECT * FROM MaritalStatus</string>
-    <string name="select_marital_status">SELECT * FROM MaritalStatus WHERE idMaritalStatus = %s</string>
+    <string name="select_marital_status">SELECT * FROM MaritalStatus WHERE idMaritalStatus = %1$s</string>
 
     <string name="select_all_nationalities">SELECT * FROM Nationality</string>
-    <string name="select_nationality">SELECT * FROM Nationality WHERE idNationality = %s</string>
+    <string name="select_nationality">SELECT * FROM Nationality WHERE idNationality = %1$s</string>
 
     <string name="select_all_disabilities">SELECT * FROM Disability</string>
-    <string name="select_disability">SELECT * FROM Disability WHERE idDisability = %s</string>
+    <string name="select_disability">SELECT * FROM Disability WHERE idDisability = %1$s</string>
 
 </resources>

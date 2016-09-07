@@ -14,14 +14,14 @@ public class ClientInfo {
     private int gender;
     private int pasportId;
     private String placeOfBirth;
-    private int placeOfResidence;
+    private String placeOfResidence;
     private String address;
     private String homePhone;
     private String mobilePhone;
     private String e_mail;
-    private int maritalStatus;
-    private int nationality;
-    private int disability;
+    private String maritalStatus;
+    private String nationality;
+    private String disability;
     private boolean pensioner;
     private Integer monthlyIncome;
     private boolean military;
@@ -82,11 +82,11 @@ public class ClientInfo {
         this.placeOfBirth = placeOfBirth;
     }
 
-    public int getPlaceOfResidence() {
+    public String getPlaceOfResidence() {
         return placeOfResidence;
     }
 
-    public void setPlaceOfResidence(int placeOfResidence) {
+    public void setPlaceOfResidence(String placeOfResidence) {
         this.placeOfResidence = placeOfResidence;
     }
 
@@ -122,27 +122,27 @@ public class ClientInfo {
         this.e_mail = e_mail;
     }
 
-    public int getMaritalStatus() {
+    public String getMaritalStatus() {
         return maritalStatus;
     }
 
-    public void setMaritalStatus(int maritalStatus) {
+    public void setMaritalStatus(String maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 
-    public int getNationality() {
+    public String getNationality() {
         return nationality;
     }
 
-    public void setNationality(int nationality) {
+    public void setNationality(String nationality) {
         this.nationality = nationality;
     }
 
-    public int getDisability() {
+    public String getDisability() {
         return disability;
     }
 
-    public void setDisability(int disability) {
+    public void setDisability(String disability) {
         this.disability = disability;
     }
 

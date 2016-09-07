@@ -3,7 +3,10 @@ package by.bsuir.clientdata.DBOperations;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 import by.bsuir.clientdata.R;
@@ -25,7 +28,16 @@ public class DBMaritalStatusData extends AsyncTask<Void, Void, List<String>> {
 
     @Override
     protected List<String> doInBackground(Void... voids) {
+        List<String> statuses = new ArrayList<>();
+        try {
+            ResultSet resultSet = statement.executeQuery(query);
+            while(resultSet.next()){
+                statuses.add(resultSet.getString("status"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
-        return null;
+        return statuses;
     }
 }

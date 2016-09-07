@@ -43,14 +43,14 @@ public  class DBClientsData extends AsyncTask<Void, Void,  List<ClientInfo>>{
                 client.setGender(Integer.parseInt(resultSet.getString("gender")));
                 client.setPasportId(Integer.parseInt(resultSet.getString("pasportId")));
                 client.setPlaceOfBirth(resultSet.getString("placeOfBirth"));
-                client.setPlaceOfResidence(Integer.parseInt(resultSet.getString("placeOfResidence")));
+                client.setPlaceOfResidence(resultSet.getString("townName"));
                 client.setAddress(resultSet.getString("address"));
                 client.setHomePhone(resultSet.getString("homephone"));
                 client.setMobilePhone(resultSet.getString("mobilePhone"));
                 client.setE_mail(resultSet.getString("e-mail"));
-                client.setMaritalStatus(Integer.parseInt(resultSet.getString("maritalStatus")));
-                client.setNationality(Integer.parseInt(resultSet.getString("nationality")));
-                client.setDisability(Integer.parseInt(resultSet.getString("disability")));
+                client.setMaritalStatus(resultSet.getString("status"));
+                client.setNationality(resultSet.getString("nationality"));
+                client.setDisability(resultSet.getString("group"));
                 client.setPensioner(Boolean.parseBoolean(resultSet.getString("pensioner")));
                 client.setMonthlyIncome(Integer.parseInt(resultSet.getString("monthlyIncome")));
                 client.setMilitary(Boolean.parseBoolean(resultSet.getString("military")));
